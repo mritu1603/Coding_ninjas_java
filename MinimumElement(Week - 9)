@@ -1,0 +1,37 @@
+package main.java;
+import java.util.*;
+
+
+public class MinimumElement {
+	public static int[] takeElement() {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int[] arr = new int[n];
+		for(int i =0;i<n;i++) {
+			System.out.println("enter" + i + "element");
+			arr[i] = s.nextInt();
+		}
+		return arr;
+		
+	}
+	public static int MinimumPrint(int[] arr) {
+		int min = arr[0];
+		for(int i =0;i<arr.length;i++) {
+			if(min>arr[i]) {
+				min = arr[i];
+			}
+		}
+		return min;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = takeElement();
+		int mini = MinimumPrint(arr);
+		System.out.println(mini);
+		
+
+	}
+
+}
